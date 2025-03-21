@@ -1,0 +1,16 @@
+pandas
+pandasai
+plotly
+openpyxl
+streamlit
+pyarrow
+pickle-mixin
+langchain
+google-generativeai
+ollama
+matplotlib
+seaborn
+scikit-learn
+tqdm
+langchain_community
+
