@@ -4,13 +4,12 @@ from langchain.schema import LLMResult, Generation
 import google.generativeai as genai
 import ollama
 
-# ✅ Configure Gemini API with Google AI Studio Key
-#GOOGLE_AI_STUDIO_API_KEY =  "AIzaSyAtLHyxyJY9L1sdwkYIIVihfg70j7OlmFM" #cogitet
+# Configure Gemini API with Google AI Studio Key
 GOOGLE_AI_STUDIO_API_KEY = "AIzaSyAe8rheF4wv2ZHJB2YboUhyyVlM2y0vmla"
 
 genai.configure(api_key=GOOGLE_AI_STUDIO_API_KEY)
 
-# ✅ Set up Global Parameters for AI Configuration
+#  Set up Global Parameters for AI Configuration
 GENAI_PARAMS = {
     "temperature": 0,
     "top_p": 0.95,
@@ -69,18 +68,3 @@ class HybridLLM(BaseLLM):
     def get_used_model(self):
         return self.used_model
 
-# ✅ Test the HybridLLM model
-# if __name__ == "__main__":
-#     # Create an instance of HybridLLM
-#     llm = HybridLLM()
-    
-#     # Test with a sample prompt
-#     prompt = "What is the capital of India?"
-#     result = llm._call(prompt)
-    
-#     # Display the generated response
-#     print("Generated Response:", result)
-    
-#     # Check which model was used
-#     used_model = llm.get_used_model()
-#     print("Model Used:", used_model)
